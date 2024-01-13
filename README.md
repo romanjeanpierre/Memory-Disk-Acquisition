@@ -4,7 +4,7 @@
 <h2>Brief Description</h2>
 This project focuses on digital data acquisition through the utilization of industry-standard tools. The primary objective involves leveraging FTK Imager and Sysinternals for disk imaging and memory dump processes, alongside the deployment of KAPE to extract crucial artifacts on a remote workstation. 
 
-<h2>Pre-Project Kickoff: Data Integrity Methodologies </h2>
+<h2>Pre-Project Kickoff: Critical Data Integrity Methodologies </h2>
 
 <h3> a) Order of Volatility</h3>
 The Order of Volatility in digital forensics emphasizes the importance and prioritization of data sources during evidence collection.
