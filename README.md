@@ -2,10 +2,26 @@
 
 
 <h2>Brief Description</h2>
-This project involves the implementation of a vulnerable virtual machine configured to allow unrestricted inbound and outbound traffic without constraints on the Firewall. A Powershell script is then used to continuously extract security event ID 4625 (indicating failed log-on attempts) from the Windows Event Viewer. Additionally, the script captures API requests to "IP geolocation", translating source IP addresses into Longitude and Latitude data. This data is then ingested into Microsoft Sentinel to be mapped out for visualization. 
+This project focuses on digital data acquisition through the utilization of industry-standard tools. The primary objective involves leveraging FTK Imager and Sysinternals for disk imaging and memory dump processes, alongside the deployment of KAPE to extract crucial artifacts on a remote workstation. 
 
-<h2>Project Objective</h2>
-Illustrate the rapid exploitation of misconfigured workstations on the web, showcasing the risks to organizational security posed by global brute-force attacks.
+<h2>Pre-Project Kickoff: Data Integrity Methodologies </h2>
+
+<h3> a) Order of Volatility</h3>
+The Order of Volatility in digital forensics emphasizes the importance and prioritization of data sources during evidence collection.
+
+1. Registers & Cache: Highly volatile; data in CPU cache and registers changes rapidly. Immediate retrieval is essential.
+
+2. Memory (RAM): Fast, temporary storage; contains valuable data about running processes and network connections. Susceptible to loss during power spikes or disconnection.
+
+3. Disk (HDD and SSD): Once overwritten, data is irrecoverable; SSDs have additional risks. Disk space is non-volatile when the system is offline.
+
+4. Remote Logging and Monitoring Data: Higher volatility than hard drives, but less vital. Priority is still given to hard drive data.
+
+5. Physical Configuration, Network Topology, Archival Media: Less vital or non-volatile. Physical and network information aids investigations, while archived data is often on separate devices.
+
+<h3> b) Chain of Custody </h3>
+
+The Chain of Custody is pivotal in computer forensics, ensuring evidence integrity by documenting handling details from collection to court. It prevents unauthorized alterations and guarantees the original state. Vital for court acceptance, it offers insight into evidence handling, protecting its integrity universally in criminal investigations. The process involves hashing for integrity, using hardware blockers for physical evidence, creating forensic copies for analysis, and storing them in secure containers. A Chain of Custody form, filled by examiners, ensures seamless handling and communication.
 
 <h2>Overview</h2>
 <p align="center">
