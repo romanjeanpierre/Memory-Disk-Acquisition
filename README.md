@@ -35,7 +35,7 @@ The Chain of Custody is pivotal in computer forensics, ensuring evidence integri
 - <b>KAPE</b>
 
 <h2>Project walk-through:</h2>
-Collecting Memory Dump: FTK Imager
+Collecting Memory Dump using FTK Imager
 <br/>
 <br/>
 Open FTK Imager: Go to File > Capture Memory > Select Destination Path > Capture Memory
@@ -51,62 +51,63 @@ Change the Directory to where the procdump.exe file resides, use calculator appl
 <br/>
 <img src="https://imgur.com/Dj1GCrN.png" height="80%" width="80%"/>
 <br />
+Get Process ID (PID) for calculator application
+<br/>
+<br/>
+Shell command => Get-Process | findstr -I calc
+<br/>
+<br/>
+Results Output: PID = 4420
+<br/>
+<br/>
+<img src="https://imgur.com/ABxLoZm.png" height="80%" width="80%" />
+<br/>
+After retrieving PID we can now use ProcDump to create a full memory dump of this process using 
+<br/>
+<br/>
+Command => .\procdump.exe -ma 4420
+<br/>
+<br/>
+<img src="https://imgur.com/K1zVv80.png" height="80%" width="80%" />
 <br />
-Misconfigure the VM to allow RDP traffic, create a new NIC network security group, remove existing inbound rules, and add a new inbound rule allowing any protocol
-<br />
-<br />
-<br />
-Step 2: Config Environment
-<br/>
-<br/> Microsoft Defender: 
-<br/>
-<br/>
-<img src="https://i.imgur.com/OnKGVRq.png" height="80%" width="80%" />
-<br/>
-<br/>
-Log Analytics Workspace:  
-<br/>
-<br/>
-<img src="https://i.imgur.com/YP977ZY.png" height="80%" width="80%" />
-<br />
-<br />
+In an incident response engagement, we can use these utilities to capture the image of Malware running on a system. 
 Disable Firewall in VM: 
 <br/>
 <br/>
-<img src="https://i.imgur.com/GyhISce.png" height="80%" width="80%" />
+<br />
+Collecting Disk Image using FTK Imager 
 <br />
 <br />
-Use Host Machine to verify if ICMP packets are reachable using 'ping -t <VM IP address>'.
-<br />
-<br />
-<br />
-Step 3: Script Execution 
-<br />
-<br />
-Powershell: 
+Open FTK Imager: Go to File > Create Disk Image > Select Source from Physical Drive
 <br/> 
 <br/>
-<img src="https://i.imgur.com/D7thSgi.png" height="80%" width="80%" /> 
+<img src="https://imgur.com/liZWHGq.png" height="80%" width="80%" /> 
 <br/> 
 <br/>
-The Powershell script detects failed RDP logins in Windows Security Events, ingesting logs into Log Analytics workspaces, and enriching output with geographical data.
+Select a Drive input 
 <br />
 <br /> 
-<br /> 
-Step 4: Extract Fields from Custom Log File 
+<img src="https://imgur.com/Zxb4QuC.png" height="80%" width="80%"/>
 <br/>
 <br/>
-Run Query:<br/>
+Create Image - Select the output destination for the file. Click Add and change the format type to a .E01 file. This filetype is used by analysis tools, such as the enterprise-grade forensics triage software EnCase.
 <br/>
-<img src="https://i.imgur.com/ZD0hxYm.png" height="80%" width="80%"/>
+<img src="https://imgur.com/MVLtw1f.png" height="80%" width="80%"/>
 <br />
 <br /> 
-Results of Failed RDP after 24 Hours:
+Select Output location and filename:
 <br/>
 <br/> 
-<img src="https://i.imgur.com/qUX0dqS.png" height="80%" width="80%" />
+<img src="https://imgur.com/7o9Ijn0.png" height="80%" width="80%" />
 <br />
+<img src="https://imgur.com/eywXn2y.png" height="80%" width="80%" />
 <br />
+Once the disk image is complete, FTK Imager will provide us with hash values for integrity purposes, so in the future we can ensure that the disk image, or any copies, are the exact same as when it was acquired. This allows us to prove or disprove claims of data corruption or tampering.
+<br/>
+<img src="https://imgur.com/yXysp7b.png" height="80%" width="80%"/>
+<br/>
+<br/>
+
 <!--
  ```diff
 - text in red
