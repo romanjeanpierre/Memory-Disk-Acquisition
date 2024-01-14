@@ -16,13 +16,14 @@
 </ol>
 
 <h3><b>b)</b> Chain of Custody</h3>
-<p>The Chain of Custody is pivotal in computer forensics, ensuring evidence integrity by documenting handling details from collection to court...</p>
+<p>The Chain of Custody is pivotal in computer forensics, ensuring evidence integrity by documenting handling details from collection to court.</p>
 
-<h2>Overview</h2>
+<h2>Project Walk-Through</h2>
+<br/>
 <p align="center">
-    <img src="https://imgur.com/guy3Nys.png" height="80%" width="80%" alt="Project Overview Image">
+    <img src="https://imgur.com/fP2d0T9.png" height="80%" width="80%" alt="Project Overview Image">
 </p>
-
+<br/>
 <h2>Languages and Utilities Used</h2>
 <ul>
     <li><b>PowerShell</b></li>
@@ -31,7 +32,6 @@
     <li><b>KAPE</b></li>
 </ul>
 
-<h2>Project Walk-Through:</h2>
 <h3>Collecting Memory Dump using FTK Imager</h3>
 <br/>
 <p>Open FTK Imager: Go to File > Capture Memory > Select Destination Path > Capture Memory</p>
