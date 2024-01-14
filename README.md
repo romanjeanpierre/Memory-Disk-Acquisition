@@ -99,7 +99,24 @@
 <img src="https://imgur.com/yXysp7b.png" height="80%" width="80%" alt="FTK Imager Disk Image Hash Values">
 <br/>
 <br/>
-
+<h3>Live Acquisition - Remote KAPE</h3>
+<br/>
+<p>Copy and Paste the KAPE Application from Host to Guest workstation via a RDP connection</p>
+<br/>
+<img src="https://imgur.com/8ImXICP.png" height="80%" width="80%" alt="FTK Imager Disk Image Creation">
+<br/>
+<br/>
+<p>Open KAPE on Guest workstation, Config target options, source, destination and items then > Execute </p>
+<br/>
+<br/>
+<img src="https://imgur.com/3DPZY6Q.png" height="80%" width="80%" alt="Drive Input Selection">
+<br/>
+<br/>
+<p>Exfiltrate Kape output from guest workstation to host workstation and analyze results.</p>
+<br/>
+<img src="https://imgur.com/Irq3N53.png" height="80%" width="80%" alt="FTK Imager Disk Image Output">
+<br/>
+<br/>
 <!-- Add additional sections or content as needed -->
 
 <h2>Conclusion</h2>
@@ -107,12 +124,3 @@
 
 <p>This project walkthrough provides a comprehensive guide to collecting memory dumps and disk images, crucial steps in investigating and responding to incidents involving potentially compromised workstations.</p>
 
-<h2>References</h2>
-<ul>
-    <li>Reference 1: Insert your reference here</li>
-    <li>Reference 2: Insert your reference here</li>
-    <!-- Add more references as needed -->
-</ul>
-
-</body>
-</html>
