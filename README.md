@@ -6,7 +6,7 @@ This project focuses on digital data acquisition through the utilization of indu
 
 <h2>Pre-Project Kickoff: Critical Data Integrity Methodologies </h2>
 
-<h3> a) Order of Volatility</h3>
+<h3> <b> a) </b> Order of Volatility</h3>
 The Order of Volatility in digital forensics emphasizes the importance and prioritization of data sources during evidence collection.
 
 1. Registers & Cache: Highly volatile; data in CPU cache and registers changes rapidly. Immediate retrieval is essential.
@@ -19,36 +19,37 @@ The Order of Volatility in digital forensics emphasizes the importance and prior
 
 5. Physical Configuration, Network Topology, Archival Media: Less vital or non-volatile. Physical and network information aids investigations, while archived data is often on separate devices.
 
-<h3> b) Chain of Custody </h3>
+<h3> <b> b) </b> Chain of Custody </h3>
 
 The Chain of Custody is pivotal in computer forensics, ensuring evidence integrity by documenting handling details from collection to court. It prevents unauthorized alterations and guarantees the original state. Vital for court acceptance, it offers insight into evidence handling, protecting its integrity universally in criminal investigations. The process involves hashing for integrity, using hardware blockers for physical evidence, creating forensic copies for analysis, and storing them in secure containers. A Chain of Custody form, filled by examiners, ensures seamless handling and communication.
 
 <h2>Overview</h2>
 <p align="center">
-<img src="https://i.imgur.com/y3Aqek1.png" height="80%" width="80%">
+<img src="https://imgur.com/guy3Nys.png" height="80%" width="80%">
 
 <h2>Languages and Utilities Used</h2>
 
 - <b>PowerShell</b>
-- <b>Kusto Query Language (KQL)</b>
-- <b>Windows 10</b>
-- <b>Microsoft Azure</b>
-- <b>Log Analytics Workspace<b>
-- <b>Azure Sentinel (SIEM)<b>
+- <b>FTK Imager</b>
+- <b>ProcDump - sysinternals</b>
+- <b>KAPE</b>
 
 <h2>Project walk-through:</h2>
-Step 1: Deploy Virtual Machine
+Collecting Memory Dump: FTK Imager
 <br/>
 <br/>
-Instance Details:
+Open FTK Imager: Go to File > Capture Memory > Select Destination Path > Capture Memory
 <br/>
 <br/>
-<img src="https://i.imgur.com/F8fdKPW.png" height="80%" width="80%"/>
+<img src="https://imgur.com/guy3Nys.png" height="80%" width="80%"/>
 <br />
 <br />
-Networking Details: <br/>
+Collecting Memory Dump: ProcDump (Sysinternals) to retrieve memory image of specific process <br/>
 <br/>
-<img src="https://i.imgur.com/oGd6m6h.png" height="80%" width="80%"/>
+Change the Directory to where the procdump.exe file resides, use calculator application for example
+<br/>
+<br/>
+<img src="https://imgur.com/Dj1GCrN.png" height="80%" width="80%"/>
 <br />
 <br />
 Misconfigure the VM to allow RDP traffic, create a new NIC network security group, remove existing inbound rules, and add a new inbound rule allowing any protocol
